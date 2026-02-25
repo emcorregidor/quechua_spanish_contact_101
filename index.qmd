@@ -1,6 +1,6 @@
 ---
-title: "Lengua, trabajos y educación"
-author: "Robert Esposito y Dra. Laura Ramírez-Polo"
+title: "Quechua-Spanish Contact"
+author: "Eva Corregidor and Robert Esposito"
 institute: "Rutgers University"
 date: "Last update: `r Sys.Date()`"
 format: rutgers-revealjs
@@ -47,344 +47,55 @@ theme_set(theme_grey(base_size = 30))
 
 ```
 
-# Fundamentos {.transition}
+# The Basics {.transition}
 
-## ¿Qué vamos a ver?
-
-::: {.fragment .fade-up}
-::: {.fragment .semi-fade-out}
-La lengua y los trabajos profesionales
-:::
-:::
+## What are we talking about today?
 
 ::: {.fragment .fade-up}
 ::: {.fragment .semi-fade-out}
-La traducción e interpreteación
+History of Quechua-Spanish Contact [@escobar2011spanish]
 :::
 :::
 
 ::: {.fragment .fade-up}
 ::: {.fragment .semi-fade-out}
-La lingüística
+An overview of general contact phenomena [@escobar2011spanish]
 :::
 :::
 
 ::: {.fragment .fade-up}
 ::: {.fragment .semi-fade-out}
-Oportunidades de educación en Rutgers
+Contrastive focus in two Peruvian varieties [@o2012realization]
 :::
 :::
-
-# La lengua y trabajos profesionales {.transition}
-
-## La inmigración en Nueva Jersey y Nueva York
-
-- El [25%]{.emph} de personas en [Nueva Jersey]{.emph} es [inmigrante]{.emph}
-- El [23%]{.emph} de personas en [Nueva York]{.emph} es [inmigrante]{.emph}
-
-![](assets/ehtnicfellowshispanicpop.png)
-
-::: footer
-https://usafacts.org/answers/how-many-immigrants-are-in-the-us/state/new-jersey/
-
-https://usafacts.org/answers/how-many-immigrants-are-in-the-us/state/new-york/
-
-https://www.njspotlightnews.org/special-report/housing-matters-lot-nj-hispanic-voters-hispanic-voting-choices/
-:::
-
-::: notes
-There are a lot of people who are bilingual in NJ; the majority of them are Spanish-English bilinguals.
-:::
-
-## Mano de obra bilingües: una necesidad creciente
-
-- En 2014, 1 de cada 5 trabajos pedía un hablante bilingüe
-
-```{r}
-data.frame(
-  `Employer` = c(
-    "Bank of America",
-    "H&R Block",
-    "AT&T",
-    "Wells Fargo",
-    "Promoworks",
-    "State Farm Insurance Companies",
-    "Rent-A-Center",
-    "Crossmark Incorporated",
-    "Bayada Home Health Care",
-    "Rutgers, the State University of New Jersey"
-  ),
-  `Anuncios de empleo bilingües` = c(
-    560, 164, 137, 119, 101, 79, 75, 65, 55, 49
-  ),
-  `% de anuncios` = c(
-    "19.9%",
-    "22.3%",
-    "12.1%",
-    "7.9%",
-    "7.1%",
-    "24.5%",
-    "24.1%",
-    "21.5%",
-    "2.4%",
-    "2.1%"
-  ),
-  check.names = FALSE
-) %>% flextable(.) %>%
-  align(align = "center", part = "all") %>%
-  bold(part = "header") %>%
-  autofit()
-  
-```
-
-::: footer
-https://www.americanimmigrationcouncil.org/wp-content/uploads/2016/05/NJ-Biliteracy-Brief-1-12-15-Updated.pdf
-:::
-
-::: notes
-There is an ever-growing demand of bilingual workers.
-:::
-
-##
-
-```{r}
-tribble(
-  ~industry, ~year, ~share,
-  "Compañías de seguros", 2010, 4.8,
-  "Compañías de seguros", 2011, 5.4,
-  "Compañías de seguros", 2012, 5.5,
-  "Compañías de seguros", 2013, 3.9,
-  "Compañías de seguros", 2014, 9.2,
-  
-  "Escuelas primarias y secundarias", 2010, 4.5,
-  "Escuelas primarias y secundarias", 2011, 5.2,
-  "Escuelas primarias y secundarias", 2012, 2.9,
-  "Escuelas primarias y secundarias", 2013, 5.0,
-  "Escuelas primarias y secundarias", 2014, 8.2,
-  
-  "Otros servicios profesionales, científicos y técnicos", 2010, 0.7,
-  "Otros servicios profesionales, científicos y técnicos", 2011, 1.6,
-  "Otros servicios profesionales, científicos y técnicos", 2012, 1.2,
-  "Otros servicios profesionales, científicos y técnicos", 2013, 2.0,
-  "Otros servicios profesionales, científicos y técnicos", 2014, 4.1,
-  
-  "Intermediación crediticia no bancaria", 2010, 0.4,
-  "Intermediación crediticia no bancaria", 2011, 0.9,
-  "Intermediación crediticia no bancaria", 2012, 1.0,
-  "Intermediación crediticia no bancaria", 2013, 3.3,
-  "Intermediación crediticia no bancaria", 2014, 2.4,
-  
-  "Alquiler de bienes de consumo", 2010, 0.3,
-  "Alquiler de bienes de consumo", 2011, 0.1,
-  "Alquiler de bienes de consumo", 2012, 3.7,
-  "Alquiler de bienes de consumo", 2013, 2.8,
-  "Alquiler de bienes de consumo", 2014, 2.2,
-  
-  "Colegios, universidades y escuelas profesionales", 2010, 3.0,
-  "Colegios, universidades y escuelas profesionales", 2011, 2.7,
-  "Colegios, universidades y escuelas profesionales", 2012, 2.6,
-  "Colegios, universidades y escuelas profesionales", 2013, 3.7,
-  "Colegios, universidades y escuelas profesionales", 2014, 4.8,
-  
-  "Hospitales generales y quirúrgicos", 2010, 7.4,
-  "Hospitales generales y quirúrgicos", 2011, 9.6,
-  "Hospitales generales y quirúrgicos", 2012, 9.0,
-  "Hospitales generales y quirúrgicos", 2013, 6.3,
-  "Hospitales generales y quirúrgicos", 2014, 8.7,
-  
-  "Apoyo a la administración pública (ejecutivo y legislativo)", 2010, 0.2,
-  "Apoyo a la administración pública (ejecutivo y legislativo)", 2011, 0.5,
-  "Apoyo a la administración pública (ejecutivo y legislativo)", 2012, 1.8,
-  "Apoyo a la administración pública (ejecutivo y legislativo)", 2013, 1.0,
-  "Apoyo a la administración pública (ejecutivo y legislativo)", 2014, 1.6,
-  
-  "Administración de programas de recursos humanos", 2010, 0.6,
-  "Administración de programas de recursos humanos", 2011, 1.8,
-  "Administración de programas de recursos humanos", 2012, 0.7,
-  "Administración de programas de recursos humanos", 2013, 1.8,
-  "Administración de programas de recursos humanos", 2014, 1.5,
-  
-  "Alojamiento para viajeros", 2010, 0.3,
-  "Alojamiento para viajeros", 2011, 1.0,
-  "Alojamiento para viajeros", 2012, 0.8,
-  "Alojamiento para viajeros", 2013, 0.6,
-  "Alojamiento para viajeros", 2014, 1.4
-) %>% ggplot(., aes(x = year, y = share, color = industry)) +
-  geom_line(size = 1) +
-  scale_y_continuous(labels = function(x) paste0(x, "%")) +
-  labs(
-    title = "Proporción de empleos bilingües por industria,\nlas 10 con mayor crecimiento (2010–2014)",
-    x = NULL,
-    y = NULL,
-    color = NULL
-  ) +
-  theme_minimal() +
-  theme(
-    legend.position = "right",
-    plot.title = element_text(face = "bold")
-  )
-```
-
-::: footer
-https://www.americanimmigrationcouncil.org/wp-content/uploads/2016/05/NJ-Biliteracy-Brief-1-12-15-Updated.pdf
-:::
-
-::: notes
-This is from 2010-2014 -- imagine now!
-:::
-
-# Traducción e interpretación {.transition}
-
-::: notes
-Let's focus on just one industry now.
-:::
-
-## Traducción e interpretación
 
 ::: {.fragment .fade-up}
-- ¿Cuál es la diferencia entre la traducción y la interpretación?
+::: {.fragment .semi-fade-out}
+Morphosyntactic contact-induced change in Spanish [@sanchez2004functional]
 :::
-::: {.fragment .fade-up}
-- ¿Alguna vez han contratado a un traductor? ¿A un intérprete?
-:::
-
-::: notes
-translation = written; interpretation = oral
 :::
 
-## ¿Cómo hacerse traductor/intérprete?
+# History of Quechua-Spanish Contact {.transition}
 
-- Rutgers ofrece...
-  - un [certificado]{.emph} de traducción e interpretación
-  - una [maestría]{.emph} de traducción e interpretación
-  - un [B.A./M.A.]{.emph} de cinco años en traducción e interpretación
+# General contact phonema {.transition}
 
-::: {.columns}
+# Focus in Contact {.transition}
 
-::: {.column width="50%"}
+# Morphosyntax in Contact {.transition}
 
-![](assets/miguel.jpg)
-:::
-
-::: {.column width="50%"}
-![](assets/laura.jpg)
-:::
-::::
-
-## ¿Dónde podría trabajar como traductor/intérprete?
-
-- Graduados del programa han encontrado trabajos en...
-
-  - grandes empresas internacionales, como Goldman Sachs
-  - el tribunal de New Brunswick
-  - la fiscalía de Nueva York
-  - la Cruz Roja
-  - agencias de traducción e interpretación
-
-::: footer
-https://span-port.rutgers.edu/translation-and-interpreting/home
-:::
-
-::: notes
-Comment on what "agencias de traducción/interpretación actually involves and that they don't necessarily have to be translators/interpreters, but project managers.
-:::
-
-## Si ya soy bilingüe, ¿hace falta un título?
-
-- Ser bilingüe es el primer paso
-- Para conseguir un trabajo especializado, hay que...
-  - tener un dominio avanzado de las lenguas de trabajo
-  - no actuar por instinto 
-  - saber las normas de la industria
-  - tomar decisiones basadas en teorías
-
-# La lingüística {.transition}
-
-## La lingüística en Rutgers
-
-:::: {.columns}
-
-::: {.column width = "35%"}
-
-![](assets/nuria.jpg)
-
-:::
-
-::: {.column width = "35%"}
-
-![](assets/joseph.jpg)
-
-:::
-
-::: {.column width = "35%"}
-
-![](assets/kendra.jpg)
-
-:::
-::::
-
-## ¿Qué hacemos?
-
-- Estudiamos la lengua desde una perspectiva científica
-- Aprendemos [el método científico]{.emph}
-- Tenemos estudiantes de las escuelas de...
-  - psicología, neurología, biología, química, ingeniería...
-
-:::: {.columns}
-::: {.column width = "50%"}
-
-![](assets/eeg.jpg)
-
-![](assets/eyetracking.jpg)
-
-:::
-::::
-
-::: notes
-For example, using eeg or eye tracking.
-:::
-
-## La enseñanza
-
-- En NJ y NYC hay una falta de maestros/as bilingües
-- Ofrecemos una [maestría]{.emph} en español para enseñar
-
-::: footer 
-https://www.chalkbeat.org/newyork/2024/10/21/new-york-bilingual-teacher-shortage/
-https://span-port.rutgers.edu/mat/125-mat
-https://www.nj.gov/education/certification/cte/altroute/
-:::
-
-# La educación 
-
-## El sello de alfabetización bilingüe
-
-- "Seal of Biliteracy"
-- Ortogado por el Departamento de Educación de New Jersey
-- Reconoce a los estudaintes que han estudiado y alcanzado un dominio de al menos un idioma además del inglés al graduarase de la escuela secundaria
-- Puedes obtener crédito universitario
-
-::: footer
-https://www.americanimmigrationcouncil.org/in-the-news/updates/new-jersey-governor-signs-seal-biliteracy-bill-top-garden-state-employers-industry-seek-bilingual-talent/
-
-https://docs.google.com/spreadsheets/u/0/d/19oZOSGoy9Maurn0RCq8C4eC1eS7e0qU6/htmlview?pli=1
-
-https://www.nj.gov/education/standards/worldlang/SealofBiliteracy.shtml
-:::
-
-## ¿Preguntas? {.final visibility="uncounted"}
+## Thanks! {.final visibility="uncounted"}
 
 ![](https://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/164.png){.absolute top="0" right="0" width="55" height="55"}
 
-![](assets/qr_slides.png)
+
 
 <table style="border-collapse: collapse; border: none;">
   
   <tr>
     <td style="text-align: right; padding-right: 10px;">
-      <a href="mailto:ramirez.laura@rutgers.edu">{{< fa solid envelope >}}</a>
+      <a href="mailto:ec1310@scarletmail.rutgers.edu">{{< fa solid envelope >}}</a>
     </td>
-    <td>ramirez.laura@rutgers.edu</td>
+    <td>ec1310@scarletmail.rutgers.edu</td>
   </tr>
   
   <tr>
@@ -415,4 +126,23 @@ https://www.nj.gov/education/standards/worldlang/SealofBiliteracy.shtml
     <td>\@RobertEspo</td>
   </tr>
   
+  <tr>
+    <td style="text-align: right; padding-right: 10px;">
+      <a href="https://github.com/emcorregidor">{{< fa brands github >}}</a>
+    </td>
+    <td>\@emcorregidor</td>
+  </tr>
+  
+  <tr>
+    <td style="text-align: right; padding-right: 10px;">
+      <a href="emcorregidor.github.io/">{{< fa solid link >}}</a>
+    </td>
+    <td>emcorregidor.github.io/</td>
+  </tr>
+  
 </table>
+
+## References {visibility="uncounted"}
+
+::: {#refs .smaller}
+:::
