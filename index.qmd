@@ -20,7 +20,6 @@ knitr::opts_chunk$set(
   out.width = "100%", 
   fig.retina = 2, 
   dpi = 300,
-  echo = F, 
   message = F, 
   warning = F
   )
@@ -31,6 +30,7 @@ library("tidyverse")
 library("here")
 library("knitr")
 library("flextable")
+library("rworldmap")
 
 theme_psllt <- function(...) {
   list(
@@ -44,6 +44,47 @@ theme_psllt <- function(...) {
 }
 
 theme_set(theme_grey(base_size = 30))
+
+```
+
+```{r}
+#| label: data
+#| include: false
+
+# create df for quechua-speaking populations based on Escudero (2011)
+
+quechua_pop <- data.frame(
+  country = c("CUB","PRI","CRI","ECU","HND","NIC","PAN",
+              "ARG","BOL","CHL","COL","DOM","SLV","GTM",
+              "MEX","PRY","PER","URY","VEN"),
+  quechua = c("no","no","no","yes","no","no","no",
+              "yes","yes","yes","yes","no","no","no",
+              "no","no","yes","no","no"),
+  num_speakers = c(NA,NA,NA,1500000,NA,NA,NA,
+                                  1000000,4700000,9000,23000,NA,NA,NA,
+                                  NA,NA,5500000,NA,NA)
+)
+
+#create map object
+quechua_pop_map_object <- joinCountryData2Map(quechua_pop, joinCode = "ISO3", nameJoinColumn = "country")
+
+# create map & export to png
+png(
+  here("assets", "quechua_speakers_map.png"),
+  width = 2000,
+  height = 1200,
+  res = 300
+)
+
+mapCountryData(
+  quechua_pop_map_object,
+  nameColumnToPlot = "num_speakers",
+  mapTitle = "Number of Quechua speakers",
+  xlim = c(-80, -55),   # longitude
+  ylim = c(-55, 20)     # latitude
+)
+
+dev.off()
 
 ```
 
@@ -76,6 +117,10 @@ Morphosyntactic contact-induced change in Spanish [@sanchez2004functional]
 :::
 
 # History of Quechua-Spanish Contact {.transition}
+
+## Number of Quechua Speakers
+
+![](assets/quechua_speakers_map.png)
 
 # General contact phonema {.transition}
 

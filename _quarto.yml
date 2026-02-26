@@ -2,7 +2,7 @@ project:
   title: "Quechua-Spanish Contact"
   render:
     - "*.qmd"
-    - "!./docs/lit/"
+    - "!./lit/"
     - "README.qmd"
 
 bibliography: ./lit/quechua_spanish_contact_101.bib
