@@ -574,6 +574,10 @@ knitr::kable(consonant_inventory, align = "lcccccc")
 https://en.wikipedia.org/wiki/Cusco_Quechua
 :::
 
+## Let's take a listen... {.scrollable}
+
+![](assets/andean_spanish.mp4)
+
 ## Typology
 
 - Quechua is [agglutinative]{.emph}; Spanish is [fusional]{.emph}
@@ -648,7 +652,7 @@ presence of possesssive determiner with genitive phrase.
 - What might Andean Spanish speakers produce?
 :::
 
-## Patterns of Use
+## Discuss...
 
 - According to [generativist/usage-based] theories, changes in patterns of use [is]{.emph} reflective of language change
 
@@ -672,7 +676,7 @@ presence of possesssive determiner with genitive phrase.
 :::
 
 ::: fragment
-- Based on the [Maximize Common Ground]{.emph} [@hawkins2024bilingualism] principle, what hypotheses can we make about [expressing contrastive focus]{.emph} in Andean Spanish?
+- Based on the [Maximize Common Ground]{.smallcaps} [@hawkins2024bilingualism] principle, what hypotheses can we make about [expressing contrastive focus]{.emph} in Andean Spanish?
 :::
 
 ::: fragment
@@ -685,8 +689,8 @@ presence of possesssive determiner with genitive phrase.
 ![](assets/limonada.png)
 
 1. On a piece of paper, write the above sentence twice.
-2. Demonstrate what a change in [peak height]{.emph} would look like on the [subject]{.emph}.
-3. Demonstrate what a change in [peak aligment]{.emph} would look like on the [subject]{.emph}.
+2. Demonstrate what a change in [peak height]{.emph} would look like on the [verb]{.emph}.
+3. Demonstrate what a change in [peak aligment]{.emph} would look like on the [verb]{.emph}.
 
 ## Peak Alignment {.scrollable}
 
@@ -694,7 +698,7 @@ presence of possesssive determiner with genitive phrase.
 
 ::: {.column width="50%"}
 
-[Lima]{.small} 
+[Lima]{style="font-size: 0.8em;"}
 
 ![](assets/lima_alignment.bmp)
 
@@ -702,9 +706,9 @@ presence of possesssive determiner with genitive phrase.
 
 ::: {.column width="50%"}
 
-[Cuzco Quechua-Spanish bilingual]{.small}
+[Cuzco Quechua-Spanish bilingual]{style="font-size: 0.8em;"}
 
-![](assets/cuzco_bilingual.bmp)
+![](assets/cuzco_bilingual_alignment.bmp)
 
 :::
 
@@ -784,10 +788,150 @@ data.frame(
 
 ```
 
-## Peak Height
+## Peak Height {.scrollable}
 
-## 
+:::: {.columns}
 
+::: {.column width="50%"}
+
+[Lima]{style="font-size: 0.8em;"}
+
+![](assets/lima_height.bmp)
+
+:::
+
+::: {.column width="50%"}
+
+[Cuzco L1 Spanish monolingual]{style="font-size: 0.8em;"}
+
+![](assets/cuzco_l1-spanish_height.bmp)
+
+[Cuzco Quechua-Spanish bilingual]{style="font-size: 0.8em;"}
+
+![](assets/cuzco_bilingual_height.bmp)
+
+[Cuzco L1 Quechua L2 Spanish]{style="font-size: 0.8em;"}
+
+![](assets/cuzco_l1-quechua_height.bmp)
+
+:::
+
+::::
+
+```{r}
+data.frame(
+  City = c("Lima",
+           "Lima",
+           "Lima",
+           "Lima",
+           "Lima",
+           "Lima",
+           
+           "Cuzco",
+           "Cuzco",
+           "Cuzco",
+           "Cuzco",
+           "Cuzco",
+           "Cuzco",
+           "Cuzco",
+           "Cuzco",
+           "Cuzco",
+           "Cuzco",
+           "Cuzco",
+           "Cuzco"),
+  
+  Speaker = c("L01",
+              "L02",
+              "L03",
+              "L04",
+              "L05",
+              "L06",
+              
+              "C01",
+              "C05",
+              "C06",
+              "C07",
+              "C09",
+              
+              "C21",
+              "C22",
+              "C23",
+              "C25",
+              
+              "C31",
+              "C32",
+              "C33"),
+  
+  Language = c("L1 Spanish",
+               "L1 Spanish",
+               "L1 Spanish",
+               "L1 Spanish",
+               "L1 Spanish",
+               "L1 Spanish",
+               
+               "L1 Spanish",
+               "L1 Spanish",
+               "L1 Spanish",
+               "L1 Spanish",
+               "L1 Spanish",
+               
+               "Quechua-Spanish bilingual",
+               "Quechua-Spanish bilingual",
+               "Quechua-Spanish bilingual",
+               "Quechua-Spanish bilingual",
+               
+               "L1 Quechua L2 Spanish",
+               "L1 Quechua L2 Spanish",
+               "L1 Quechua L2 Spanish"
+  ),
+  Subject = c("*",
+              "nsd",
+              "nsd",
+              "nsd",
+              "nsd",
+              "*",
+              
+              "nsd",
+              "*",
+              "nsd",
+              "*",
+              "*",
+              
+              "nsd",
+              "*",
+              "*",
+              "*",
+              
+              "*",
+              "*",
+              "*")
+  
+) %>% flextable() %>%
+  merge_v(j = c("City","Language")) %>%
+  valign(j = c("City","Language"), valign = "center") %>%
+  hline(i = 6, border = officer::fp_border(width = 1.5)) %>%
+  hline(i = 11, 
+        border = officer::fp_border(width = 1, style = "dotted")) %>%
+  hline(i = 15, 
+        border = officer::fp_border(width = 1, style = "dotted"))
+
+```
+
+## Discuss...
+
+::: {.fragment}
+
+- Were the author's [hypotheses]{.emph} supported?
+
+- According to the [criteria]{.emph} proposed by @thomason2019language, is there enough [evidence]{.emph} to propose contact-induced language change?
+
+:::
+
+::: {.fragment}
+
+- [What more information]{.emph} would we need to decide if this is contact-induced language change?
+
+:::
 
 # Morphosyntax in Contact [@sanchez2004functional] {.transition}
 
@@ -849,6 +993,21 @@ data.frame(
   </tr>
   
 </table>
+
+# Extra Slides {visibility="uncounted"}
+
+## Contact-Induced Language Change Criteria [@thomason2019language] {.scrollable}
+
+1. The recipient language must be examined as a whole, not single features in isolation. Multiple related features in Language B must point to external influence.
+
+2. There must be a plausible source Language A that was in sustained and intimate contact with Language B.
+
+3. A and B must share several features across different subsystems (e.g., syntax, morphology, phonology), not just a single feature.
+
+4. The feature must be old in Language A (i.e., not an innovation in the source language).
+
+5. The feature must be innovative (new) in Language B (i.e., not present in B before contact).
+
 
 ## References {visibility="uncounted"}
 
