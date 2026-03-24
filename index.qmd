@@ -626,6 +626,24 @@ https://en.wikipedia.org/wiki/Cusco_Quechua
 
 ![](assets/andean_spanish.mp4)
 
+## Morphosyntactic Features
+
+- Use of conditional in protasis/apodosis of conditional sentences (8)
+- Omission of third person object clitics (9)
+- Use of animate leísmo (10)
+
+![](assets/morphosynt_1.png)
+
+## Morphosyntactic Features
+
+- Frequent use of diminutive on nouns, adj, gerunds, numerals, adverbs, pronouns (modesty)([corriendito, lejitos, ellita]{.emph})
+- Frequent use of titles with first names ([Doctor Gustavo, Señor Pedro, Licenciado Juan]{.emph})
+- Redundant direct object clitics with nominal referent ([lo visité a mi papá]{.emph})
+
+## Semantic and Discursive Features
+
+- Use of estar + GERUND with the present function ([¿en qué parte de Estados Unidos está viviendo Susana?]{.emph})
+
 ## Typology
 
 - Quechua is [agglutinative]{.emph}; Spanish is [fusional]{.emph}
@@ -655,24 +673,6 @@ https://en.wikipedia.org/wiki/Cusco_Quechua
 :::
 
 ::::
-
-## Morphosyntactic Features
-
-- Use of conditional in protasis/apodosis of conditional sentences (8)
-- Omission of third person object clitics (9)
-- Use of animate leísmo (10)
-
-![](assets/morphosynt_1.png)
-
-## Morphosyntactic Features
-
-- Frequent use of diminutive on nouns, adj, gerunds, numerals, adverbs, pronouns (modesty)([corriendito, lejitos, ellita]{.emph})
-- Frequent use of titles with first names ([Doctor Gustavo, Señor Pedro, Licenciado Juan]{.emph})
-- Redundant direct object clitics with nominal referent ([lo visité a mi papá]{.emph})
-
-## Semantic and Discursive Features
-
-- Use of estar + GERUND with the present function ([¿en qué parte de Estados Unidos está viviendo Susana?]{.emph})
 
 ## Typology
 
